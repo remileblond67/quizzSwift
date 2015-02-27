@@ -19,12 +19,12 @@ class ViewController: UIViewController {
     
     var curQuestion: Int = 0
     let questions = [
-        ["Pourquoi ?", "Parceque", false],
-        ["Comment ?", "Comme ça", false],
-        ["Où ?", "Là bas", false],
-        ["A quoi bon ?", "42", true],
-        ["La grande question sur la vie, l'univers et le reste", "42", true],
-        ["Quelle est la couleur du cheval blanc d'Henry 4 ?", "Blanc", false]
+        (quest:"Pourquoi ?", rep:"Parceque", baleze:false),
+        (quest:"Comment ?", rep:"Comme ça", baleze:false),
+        (quest:"Où ?", rep:"Là bas", baleze:false),
+        (quest:"A quoi bon ?", rep:"C'est pour le travail", baleze:true),
+        (quest:"La grande question sur la vie, l'univers et le reste", rep:"42", baleze:true),
+        (quest:"Quelle est la couleur du cheval blanc d'Henry 4 ?", rep:"Blanc", baleze:false)
     ]
     
     var affiché = []
@@ -37,9 +37,9 @@ class ViewController: UIViewController {
     
     func afficheQuestion (numQuestion: Int) {
         println("Affichage de la question \(curQuestion)")
-        println(questions[curQuestion][0])
-        txtQuestion.text = questions[curQuestion][0].description
-        txtReponse.text = questions[curQuestion][1].description
+        println(questions[curQuestion].quest)
+        txtQuestion.text = questions[curQuestion].quest
+        txtReponse.text = questions[curQuestion].rep
     }
 
     override func didReceiveMemoryWarning() {

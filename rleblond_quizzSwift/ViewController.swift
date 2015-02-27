@@ -21,38 +21,31 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         afficheQuestion(myQuizz.curQuestion)
     }
     
     func afficheQuestion (numQuestion: Int) {
-        println("Affichage de la question \(myQuizz.curQuestion)")
-        txtQuestion.text = myQuizz.questions[myQuizz.curQuestion].quest
-        txtReponse.text = myQuizz.questions[myQuizz.curQuestion].rep
+        txtQuestion.text = myQuizz.getCurQuestion()
+        txtReponse.text = myQuizz.getCurRep()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     @IBAction func actNav(sender: AnyObject) {
         
         if sender === btnNext {
             println("Next")
-            if myQuizz.curQuestion < (myQuizz.questions.count-1) {
-                myQuizz.curQuestion++
-            }
+            myQuizz.goNext()
             
         } else if sender === btnPrev {
             println("Previous")
-            if myQuizz.curQuestion > 0 {
-                myQuizz.curQuestion--
-            }
+            myQuizz.goPrevious()
         }
         
-        btnPrev.hidden = (myQuizz.curQuestion == 0)
-        btnNext.hidden = (myQuizz.curQuestion == (myQuizz.questions.count-1))
+        btnPrev.hidden = myQuizz.first()
+        btnNext.hidden = myQuizz.last()
         
         afficheQuestion(myQuizz.curQuestion)
     }

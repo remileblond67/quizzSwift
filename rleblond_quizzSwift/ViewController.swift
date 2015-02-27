@@ -17,16 +17,20 @@ class ViewController: UIViewController {
     @IBOutlet weak var txtReponse: UITextField!
     @IBOutlet weak var txtQuestion: UITextField!
     @IBOutlet weak var swtBaleze: UISwitch!
+    @IBOutlet weak var txtNiveau: UILabel!
     
     let myQuizz = questionnaire()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        myQuizz.findNext(swtBaleze.on)
+        
         afficheQuestion()
     }
     
     func afficheQuestion() {
         txtQuestion.text = myQuizz.getCurQuestion()
+        
         if myQuizz.getVue() {
             txtReponse.text = myQuizz.getCurRep()
             
@@ -38,6 +42,10 @@ class ViewController: UIViewController {
             txtReponse.hidden = true
             btnRéponse.hidden = false
         }
+        
+        txtNiveau.text = myQuizz.getNiveau()
+        btnPrev.hidden = myQuizz.first()
+        btnNext.hidden = myQuizz.last()
     }
 
     override func didReceiveMemoryWarning() {
@@ -52,9 +60,6 @@ class ViewController: UIViewController {
         } else if sender === btnPrev {
             myQuizz.goPrevious(swtBaleze.on)
         }
-        
-        btnPrev.hidden = myQuizz.first()
-        btnNext.hidden = myQuizz.last()
         
         afficheQuestion()
     }

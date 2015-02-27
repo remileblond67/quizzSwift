@@ -13,6 +13,7 @@
 		A5136D901A9F0FF700066E74 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5136D8F1A9F0FF700066E74 /* Images.xcassets */; };
 		A5136D931A9F0FF700066E74 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5136D911A9F0FF700066E74 /* LaunchScreen.xib */; };
 		A5136D9F1A9F0FF700066E74 /* rleblond_quizzSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5136D9E1A9F0FF700066E74 /* rleblond_quizzSwiftTests.swift */; };
+		A580D23C1AA055CF00C4B34A /* questionnaire.swift in Sources */ = {isa = PBXBuildFile; fileRef = A580D23B1AA055CE00C4B34A /* questionnaire.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		A5136D981A9F0FF700066E74 /* rleblond_quizzSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = rleblond_quizzSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5136D9D1A9F0FF700066E74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5136D9E1A9F0FF700066E74 /* rleblond_quizzSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rleblond_quizzSwiftTests.swift; sourceTree = "<group>"; };
+		A580D23B1AA055CE00C4B34A /* questionnaire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = questionnaire.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			children = (
 				A5136D881A9F0FF600066E74 /* AppDelegate.swift */,
 				A5136D8A1A9F0FF600066E74 /* ViewController.swift */,
+				A580D23B1AA055CE00C4B34A /* questionnaire.swift */,
 				A5136D8C1A9F0FF700066E74 /* Main.storyboard */,
 				A5136D8F1A9F0FF700066E74 /* Images.xcassets */,
 				A5136D911A9F0FF700066E74 /* LaunchScreen.xib */,
@@ -213,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5136D8B1A9F0FF600066E74 /* ViewController.swift in Sources */,
+				A580D23C1AA055CF00C4B34A /* questionnaire.swift in Sources */,
 				A5136D891A9F0FF600066E74 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -409,6 +413,7 @@
 				A5136DA41A9F0FF700066E74 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A5136DA51A9F0FF700066E74 /* Build configuration list for PBXNativeTarget "rleblond_quizzSwiftTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +422,7 @@
 				A5136DA71A9F0FF700066E74 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

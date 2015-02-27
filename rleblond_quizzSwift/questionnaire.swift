@@ -11,13 +11,13 @@ import Foundation
 class questionnaire {
     var curQuestion: Int = 0
     
-    let questions = [
-        (quest:"Pourquoi ?", rep:"Parceque", baleze:false),
-        (quest:"Comment ?", rep:"Comme ça", baleze:false),
-        (quest:"Où ?", rep:"Là bas", baleze:false),
-        (quest:"A quoi bon ?", rep:"C'est pour le travail", baleze:true),
-        (quest:"La grande question sur la vie, l'univers et le reste", rep:"42", baleze:true),
-        (quest:"Quelle est la couleur du cheval blanc d'Henry 4 ?", rep:"Blanc", baleze:false)
+    var questions = [
+        (quest:"Pourquoi ?", rep:"Parceque", baleze:false, vue:false),
+        (quest:"Comment ?", rep:"Comme ça", baleze:false, vue:false),
+        (quest:"Où ?", rep:"Là bas", baleze:false, vue:false),
+        (quest:"A quoi bon ?", rep:"C'est pour le travail", baleze:true, vue:false),
+        (quest:"La grande question sur la vie, l'univers et le reste", rep:"42", baleze:true, vue:false),
+        (quest:"Quelle est la couleur du cheval blanc d'Henry 4 ?", rep:"Blanc", baleze:false, vue:false)
     ]
     
     // Otenir la question courante
@@ -26,8 +26,20 @@ class questionnaire {
     }
     
     // Obtenir la réponse courante
-    func getCurRep()->String {
-        return questions[curQuestion].rep
+    func getCurRep()->String? {
+        if questions[curQuestion].vue {
+            return questions[curQuestion].rep
+        } else {
+            return nil
+        }
+    }
+    
+    func getVue()->Bool {
+        return questions[curQuestion].vue
+    }
+    
+    func setVue() {
+        questions[curQuestion].vue = true
     }
     
     // Aller à la question suivante

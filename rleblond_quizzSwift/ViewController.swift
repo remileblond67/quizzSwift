@@ -22,12 +22,22 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        afficheQuestion(myQuizz.curQuestion)
+        afficheQuestion()
     }
     
-    func afficheQuestion (numQuestion: Int) {
+    func afficheQuestion() {
         txtQuestion.text = myQuizz.getCurQuestion()
-        txtReponse.text = myQuizz.getCurRep()
+        if myQuizz.getVue() {
+            txtReponse.text = myQuizz.getCurRep()
+            
+            lblReponse.hidden = false
+            txtReponse.hidden = false
+            btnRéponse.hidden = true
+        } else {
+            lblReponse.hidden = true
+            txtReponse.hidden = true
+            btnRéponse.hidden = false
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -46,15 +56,12 @@ class ViewController: UIViewController {
         btnPrev.hidden = myQuizz.first()
         btnNext.hidden = myQuizz.last()
         
-        afficheQuestion(myQuizz.curQuestion)
+        afficheQuestion()
     }
 
     @IBAction func actAfficheRéponse(sender: AnyObject) {
-        println("Affichage de la réponse \(myQuizz.curQuestion)")
-        lblReponse.hidden = false
-        txtReponse.hidden = false
-        
-        btnRéponse.hidden = true
+        myQuizz.setVue()
+        afficheQuestion()
     }
 
 }

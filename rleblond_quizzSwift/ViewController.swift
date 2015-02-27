@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var lblReponse: UILabel!
     @IBOutlet weak var txtReponse: UITextField!
     @IBOutlet weak var txtQuestion: UITextField!
+    @IBOutlet weak var swtBaleze: UISwitch!
     
     let myQuizz = questionnaire()
     
@@ -36,12 +37,10 @@ class ViewController: UIViewController {
     @IBAction func actNav(sender: AnyObject) {
         
         if sender === btnNext {
-            println("Next")
-            myQuizz.goNext()
+            myQuizz.goNext(swtBaleze.on)
             
         } else if sender === btnPrev {
-            println("Previous")
-            myQuizz.goPrevious()
+            myQuizz.goPrevious(swtBaleze.on)
         }
         
         btnPrev.hidden = myQuizz.first()
@@ -54,6 +53,8 @@ class ViewController: UIViewController {
         println("Affichage de la réponse \(myQuizz.curQuestion)")
         lblReponse.hidden = false
         txtReponse.hidden = false
+        
+        btnRéponse.hidden = true
     }
 
 }

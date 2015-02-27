@@ -42,12 +42,12 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tbu-Nj-TXg">
-                                <rect key="frame" x="36" y="242" width="528" height="30"/>
+                                <rect key="frame" x="36" y="191" width="528" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Réponse" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="32U-IF-NbX">
-                                <rect key="frame" x="36" y="211" width="528" height="21"/>
+                                <rect key="frame" x="36" y="160" width="528" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -90,7 +90,6 @@
                             <constraint firstItem="Tbu-Nj-TXg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="P60-AC-ofz"/>
                             <constraint firstItem="x2y-d2-dwE" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="SG2-2J-rqk"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ahf-NT-WZ7" secondAttribute="trailing" constant="30" id="TYr-hd-PUn"/>
-                            <constraint firstItem="32U-IF-NbX" firstAttribute="top" secondItem="0E6-du-OTP" secondAttribute="bottom" constant="20" id="Tvm-DG-ZUY"/>
                             <constraint firstItem="0E6-du-OTP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="U7C-XS-3Vc"/>
                             <constraint firstItem="9bF-D8-eKZ" firstAttribute="centerX" secondItem="ahf-NT-WZ7" secondAttribute="centerX" constant="265.5" id="U92-Z5-miv"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="vCU-jh-3S2" secondAttribute="bottom" constant="20" id="VwV-aU-bRM"/>
@@ -104,6 +103,7 @@
                             <constraint firstItem="vCU-jh-3S2" firstAttribute="leading" secondItem="6JA-YM-P5C" secondAttribute="trailing" constant="8" id="tM4-j4-h7p"/>
                             <constraint firstItem="vCU-jh-3S2" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="-20" id="tRJ-cP-NBA"/>
                             <constraint firstItem="6JA-YM-P5C" firstAttribute="centerY" secondItem="vCU-jh-3S2" secondAttribute="centerY" id="v3d-KF-9hv"/>
+                            <constraint firstItem="9bF-D8-eKZ" firstAttribute="bottom" secondItem="32U-IF-NbX" secondAttribute="bottom" constant="-40" id="ygu-Lq-If7"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -117,6 +117,7 @@
                         <outlet property="btnPrev" destination="x2y-d2-dwE" id="BR1-uF-OWs"/>
                         <outlet property="btnRéponse" destination="0E6-du-OTP" id="t0n-Ce-C2Z"/>
                         <outlet property="lblReponse" destination="32U-IF-NbX" id="G1C-z5-X78"/>
+                        <outlet property="swtBaleze" destination="vCU-jh-3S2" id="VhW-lA-amm"/>
                         <outlet property="txtQuestion" destination="9bF-D8-eKZ" id="qAo-w5-1u1"/>
                         <outlet property="txtReponse" destination="Tbu-Nj-TXg" id="YfL-v1-b7y"/>
                     </connections>
